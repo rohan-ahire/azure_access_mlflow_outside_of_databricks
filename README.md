@@ -2,8 +2,12 @@
 Code to show how we can access mlflow or other databricks api from outside of databricks workspace. This is specific to Azure.
 
 * This process assumes a Service Principal (SP) exists.
-* There is a one-time step "one_time_steps.sh" required to assign the SP to the databricks workspace.
+* There is a one-time step "one_time_steps.sh" required to assign the SP to the databricks workspace. This script needs the databricks token to be exported in the env. This token is the one that might be owned by the owner of the SP.
 * Each script required certain variables to be exported in the environment before any of the scripts can be executed.
+    * DATABRICKS_HOST
+    * SP_CLIENT_ID
+    * SP_CLIENT_SECRET
+    * TENANT_ID
 
 
 There are two ways to connect to databricks using the Azure SP.
